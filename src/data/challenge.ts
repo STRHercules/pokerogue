@@ -30,7 +30,7 @@ import { ChallengeType } from "#enums/challenge-type";
 import type { MoveSourceType } from "#enums/move-source-type";
 
 /** A constant for the default max cost of the starting party before a run */
-const DEFAULT_PARTY_MAX_COST = 10;
+const DEFAULT_PARTY_MAX_COST = 50;
 
 /**
  * A challenge object. Exists only to serve as a base class.
