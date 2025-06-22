@@ -743,7 +743,8 @@ export default class StarterSelectUiHandler extends MessageUiHandler {
     this.pokemonEggMoveBgs = [];
     this.pokemonEggMoveLabels = [];
 
-    this.valueLimitLabel = addTextObject(teamWindowX + 17, 150, "0/10", TextStyle.TOOLTIP_CONTENT);
+     // Display starting party capacity; default was 10 but we bumped it to 50
+    this.valueLimitLabel = addTextObject(teamWindowX + 17, 150, "0/50", TextStyle.TOOLTIP_CONTENT);
     this.valueLimitLabel.setOrigin(0.5, 0);
     this.starterSelectContainer.add(this.valueLimitLabel);
 
@@ -2965,17 +2966,12 @@ export default class StarterSelectUiHandler extends MessageUiHandler {
     }
   }
 
+  // Determine how many starter points the player can spend.
+  // Previously this defaulted to 10 (15 in endless modes).
+  // The game now starts with 50 points for all modes.
   getValueLimit(): number {
-    const valueLimit = new NumberHolder(0);
-    switch (globalScene.gameMode.modeId) {
-      case GameModes.ENDLESS:
-      case GameModes.SPLICED_ENDLESS:
-        valueLimit.value = 15;
-        break;
-      default:
-        valueLimit.value = 10;
-    }
-
+    const valueLimit = new NumberHolder(50);
+    
     applyChallenges(ChallengeType.STARTER_POINTS, valueLimit);
 
     return valueLimit.value;
