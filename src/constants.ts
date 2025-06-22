@@ -1,7 +1,8 @@
 import { SpeciesId } from "#enums/species-id";
+import { SpeciesDefaultFormMatchTrigger } from "./data/pokemon-forms/form-change-triggers";
 
 /** The maximum size of the player's party */
-export const PLAYER_PARTY_MAX_SIZE: number = 6;
+export const PLAYER_PARTY_MAX_SIZE: number = 10;
 
 /** Whether to use seasonal splash messages in general */
 export const USE_SEASONAL_SPLASH_MESSAGES: boolean = true;
@@ -24,6 +25,60 @@ export const TYPE_BOOST_ITEM_BOOST_PERCENT = 20;
  * The default species that a new player can choose from
  */
 export const defaultStarterSpecies: SpeciesId[] = [
+  SpeciesId.KORAIDON,
+  SpeciesId.GOUGING_FIRE,
+  SpeciesId.WALKING_WAKE,
+  SpeciesId.RAGING_BOLT,
+  SpeciesId.ROARING_MOON,
+  SpeciesId.ETERNATUS,
+  SpeciesId.MEWTWO,
+  SpeciesId.MEW,
+  SpeciesId.LUGIA,
+  SpeciesId.HO_OH,
+  SpeciesId.GROUDON,
+  SpeciesId.KYOGRE,
+  SpeciesId.RAYQUAZA,
+  SpeciesId.DIALGA,
+  SpeciesId.PALKIA,
+  SpeciesId.GIRATINA,
+  SpeciesId.ARCEUS,
+  SpeciesId.ZEKROM,
+  SpeciesId.RESHIRAM,
+  SpeciesId.KYUREM,
+  SpeciesId.XERNEAS,
+  SpeciesId.YVELTAL,
+  SpeciesId.ZYGARDE,
+  SpeciesId.SOLGALEO,
+  SpeciesId.LUNALA,
+  SpeciesId.NECROZMA,
+  SpeciesId.MARSHADOW,
+  SpeciesId.ZERAORA,
+  SpeciesId.MELTAN,
+  SpeciesId.MELMETAL,
+  SpeciesId.CALYREX,
+  SpeciesId.IRON_VALIANT,
+  SpeciesId.MELOETTA,
+  SpeciesId.VICTINI,
+  SpeciesId.TAPU_KOKO,
+  SpeciesId.TAPU_LELE,
+  SpeciesId.TAPU_BULU,
+  SpeciesId.TAPU_FINI,
+  SpeciesId.CELEBI,
+  SpeciesId.JIRACHI,
+  SpeciesId.DIANCIE,
+  SpeciesId.VOLCANION,
+  SpeciesId.MAGEARNA,
+  SpeciesId.ZARUDE,
+  SpeciesId.CINDERACE,
+  SpeciesId.INTELEON,
+  SpeciesId.RILLABOOM,
+  SpeciesId.SLAKING,
+  SpeciesId.DRAGAPULT,
+  SpeciesId.HYDREIGON,
+  SpeciesId.LARVITAR,
+  SpeciesId.DITTO,
+  SpeciesId.EEVEE,
+  SpeciesId.DRATINI,
   SpeciesId.BULBASAUR,
   SpeciesId.CHARMANDER,
   SpeciesId.SQUIRTLE,
